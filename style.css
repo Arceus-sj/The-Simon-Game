@@ -42,26 +42,71 @@ h1 {
     height: 200px;
     margin: 0;
     border: 8px solid #000000;
+    cursor: pointer;
     /* border: 1px solid #fca311; */
 }
 
 #green {
     border-top-left-radius: 100%;
-    background-color: #38b000;
+    background-color: rgba(56, 176, 0, 1);
+    transition-property: background-color, border;
+    transition-duration: 0.2s, 0.1s;
+}
+
+#green:hover {
+    background-color: rgba(56, 176, 0, 0.7);
+    border: 10px solid #000000;
 }
 
 #red {
     border-top-right-radius: 100%;
-    background-color: #ef233c;
+    background-color: rgba(239, 35, 60, 1);
+    transition-property: background-color, border;
+    transition-duration: 0.2s, 0.1s;
+}
+
+#red:hover {
+    background-color: rgba(239, 35, 60, 0.7);
+    border: 10px solid #000000;
 }
 
 #yellow {
     border-bottom-left-radius: 100%;
-    background-color: #fcf300;
+    background-color: rgba(252, 243, 0, 1);
+    transition-property: background-color, border;
+    transition-duration: 0.2s, 0.1s;
+}
+
+#yellow:hover {
+    background-color: rgba(252, 243, 0, 0.7);
+    border: 10px solid #000000;
 }
 
 #blue {
     
     border-bottom-right-radius: 100%; 
-    background-color: #00b4d8;
+    background-color: rgba(0, 180, 216, 1);
+    transition-property: background-color, border;
+    transition-duration: 0.2s, 0.1s;
+}
+
+#blue:hover {
+    background-color: rgba(0, 180, 216, 0.7);
+    border: 10px solid #000000;
+}
+
+.flash-animation {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
 }
